@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D801704528F7663B0086E56A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D801704428F7663B0086E56A /* MainViewController.swift */; };
+		D81E6D6B291057C2004FA0C0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D81E6D6A291057C2004FA0C0 /* logo.png */; };
 		D8BF9CD528F7586600C3A333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BF9CD428F7586600C3A333 /* AppDelegate.swift */; };
 		D8BF9CD728F7586600C3A333 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BF9CD628F7586600C3A333 /* SceneDelegate.swift */; };
 		D8BF9CDC28F7586600C3A333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BF9CDA28F7586600C3A333 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		D801704428F7663B0086E56A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D81E6D6A291057C2004FA0C0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../../icons8-vk-com-color/logo.png"; sourceTree = "<group>"; };
 		D8BF9CD128F7586600C3A333 /* interface_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interface_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BF9CD428F7586600C3A333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8BF9CD628F7586600C3A333 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D81E6D68291057A5004FA0C0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D81E6D6A291057C2004FA0C0 /* logo.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		D8BF9CC828F7586600C3A333 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		D8BF9CD328F7586600C3A333 /* interface_project */ = {
 			isa = PBXGroup;
 			children = (
+				D81E6D68291057A5004FA0C0 /* images */,
 				D8BF9CD428F7586600C3A333 /* AppDelegate.swift */,
 				D8BF9CD628F7586600C3A333 /* SceneDelegate.swift */,
 				D8BF9CDA28F7586600C3A333 /* Main.storyboard */,
@@ -125,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81E6D6B291057C2004FA0C0 /* logo.png in Resources */,
 				D8BF9CE128F7586700C3A333 /* LaunchScreen.storyboard in Resources */,
 				D8BF9CDE28F7586700C3A333 /* Assets.xcassets in Resources */,
 				D8BF9CDC28F7586600C3A333 /* Main.storyboard in Resources */,
