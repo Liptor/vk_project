@@ -286,8 +286,9 @@
                                                 <action selector="imageView:" destination="7js-ah-skr" eventType="valueChanged" id="haK-vB-rpI"/>
                                             </connections>
                                         </view>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-JE-Vmm">
-                                            <rect key="frame" x="314" y="21" width="56" height="43"/>
+                                        <view contentMode="scaleToFill" id="JTO-JE-Vmm" customClass="LikeControl" customModule="interface_project" customModuleProvider="target">
+                                            <rect key="frame" x="314" y="20" width="56" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3w5-Dj-yhk">
                                                     <rect key="frame" x="5" y="11" width="20" height="23"/>
@@ -295,7 +296,7 @@
                                                     <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92s-5I-OEY">
-                                                    <rect key="frame" x="29" y="11" width="27" height="21"/>
+                                                    <rect key="frame" x="33" y="11" width="27" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -303,19 +304,18 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="likeButton:" destination="7js-ah-skr" eventType="valueChanged" id="80f-9M-UoZ"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="JTO-JE-Vmm" firstAttribute="leading" secondItem="BwP-Jq-AEK" secondAttribute="trailing" id="Bjh-rd-Glo"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Io7-MO-fEq" secondAttribute="trailing" constant="20" id="CWQ-P7-wbX"/>
                                         <constraint firstAttribute="bottom" secondItem="BwP-Jq-AEK" secondAttribute="bottom" id="HYv-9V-8tg"/>
                                         <constraint firstItem="BwP-Jq-AEK" firstAttribute="leading" secondItem="ey1-3N-jDi" secondAttribute="leading" constant="20" id="Lw8-uv-oLn"/>
                                         <constraint firstItem="Io7-MO-fEq" firstAttribute="leading" secondItem="BwP-Jq-AEK" secondAttribute="trailing" constant="20" id="Xrc-PU-eDc"/>
-                                        <constraint firstAttribute="trailing" secondItem="JTO-JE-Vmm" secondAttribute="trailing" constant="20" id="cb7-PZ-9Wy"/>
-                                        <constraint firstItem="JTO-JE-Vmm" firstAttribute="top" secondItem="ey1-3N-jDi" secondAttribute="topMargin" constant="30" id="dSY-DX-SVv"/>
                                         <constraint firstItem="BwP-Jq-AEK" firstAttribute="top" secondItem="ey1-3N-jDi" secondAttribute="top" id="ebv-dV-VGS"/>
                                         <constraint firstItem="Io7-MO-fEq" firstAttribute="centerY" secondItem="BwP-Jq-AEK" secondAttribute="centerY" id="fW5-2o-obs"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="JTO-JE-Vmm" secondAttribute="bottom" constant="30" id="gNl-Fx-gjO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
