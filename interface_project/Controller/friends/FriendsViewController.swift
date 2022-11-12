@@ -8,17 +8,18 @@
 import UIKit
 
 class FriendsViewController: UITableViewController {
-    
+
     let friends = [
-        Friend(image: UIImage.init(systemName: "paperplane.fill"), name: "Andrew"),
-        Friend(image: UIImage.init(systemName: "pencil"), name: "Petr"),
-        Friend(image: UIImage.init(systemName: "square.and.pencil"), name: "Olga"),
-        Friend(image: UIImage.init(systemName: "trash.fill"), name: "Semen"),
-        Friend(image: UIImage.init(systemName: "folder.badge.plus"), name: "Alexey")
+        Friend(image: UIImage(named: "avatar.jpg"), name: "Andrew"),
+        Friend(image: UIImage(named: "avatar.jpg"), name: "Petr"),
+        Friend(image: UIImage(named: "avatar.jpg"), name: "Olga"),
+        Friend(image: UIImage(named: "avatar.jpg"), name: "Semen"),
+        Friend(image: UIImage(named: "avatar.jpg"), name: "Alexey")
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,6 +49,7 @@ class FriendsViewController: UITableViewController {
         
         cell.labelFriend.text = friends[indexPath.row].name
         cell.imageFriend.image = friends[indexPath.row].image
+        cell.imageFriend.setRounded()
         
         return cell
     }

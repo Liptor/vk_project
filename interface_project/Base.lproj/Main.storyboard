@@ -263,31 +263,63 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="83"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill.badge.minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1CH-eO-csF">
-                                            <rect key="frame" x="20" y="1.3333333333333357" width="84.333333333333329" height="80.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="83" id="auY-eh-r3b"/>
-                                                <constraint firstAttribute="width" secondItem="1CH-eO-csF" secondAttribute="height" multiplier="1:1" id="hBf-fj-Knu"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io7-MO-fEq">
                                             <rect key="frame" x="123" y="31" width="227" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwP-Jq-AEK" customClass="AvatarControl" customModule="interface_project" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="0.0" width="83" height="83"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.slash.fill" catalog="system" id="EfV-75-lG4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="BwP-Jq-AEK" secondAttribute="height" multiplier="1:1" id="k1a-Ao-Jeh"/>
+                                                <constraint firstAttribute="height" constant="85" id="r6I-jr-MQC"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="imageView:" destination="7js-ah-skr" eventType="valueChanged" id="haK-vB-rpI"/>
+                                            </connections>
+                                        </view>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-JE-Vmm">
+                                            <rect key="frame" x="314" y="21" width="56" height="43"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3w5-Dj-yhk">
+                                                    <rect key="frame" x="5" y="11" width="20" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92s-5I-OEY">
+                                                    <rect key="frame" x="29" y="11" width="27" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="1CH-eO-csF" secondAttribute="bottom" id="237-Y8-sdS"/>
-                                        <constraint firstItem="1CH-eO-csF" firstAttribute="top" secondItem="ey1-3N-jDi" secondAttribute="top" id="4cZ-M8-k9d"/>
+                                        <constraint firstItem="JTO-JE-Vmm" firstAttribute="leading" secondItem="BwP-Jq-AEK" secondAttribute="trailing" id="Bjh-rd-Glo"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Io7-MO-fEq" secondAttribute="trailing" constant="20" id="CWQ-P7-wbX"/>
-                                        <constraint firstItem="1CH-eO-csF" firstAttribute="leading" secondItem="ey1-3N-jDi" secondAttribute="leading" constant="20" id="Dpb-rq-FlK"/>
-                                        <constraint firstItem="Io7-MO-fEq" firstAttribute="leading" secondItem="1CH-eO-csF" secondAttribute="trailing" constant="20" id="Vzw-MF-h2K"/>
-                                        <constraint firstItem="Io7-MO-fEq" firstAttribute="centerY" secondItem="1CH-eO-csF" secondAttribute="centerY" id="vZk-0M-mOZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="BwP-Jq-AEK" secondAttribute="bottom" id="HYv-9V-8tg"/>
+                                        <constraint firstItem="BwP-Jq-AEK" firstAttribute="leading" secondItem="ey1-3N-jDi" secondAttribute="leading" constant="20" id="Lw8-uv-oLn"/>
+                                        <constraint firstItem="Io7-MO-fEq" firstAttribute="leading" secondItem="BwP-Jq-AEK" secondAttribute="trailing" constant="20" id="Xrc-PU-eDc"/>
+                                        <constraint firstAttribute="trailing" secondItem="JTO-JE-Vmm" secondAttribute="trailing" constant="20" id="cb7-PZ-9Wy"/>
+                                        <constraint firstItem="JTO-JE-Vmm" firstAttribute="top" secondItem="ey1-3N-jDi" secondAttribute="topMargin" constant="30" id="dSY-DX-SVv"/>
+                                        <constraint firstItem="BwP-Jq-AEK" firstAttribute="top" secondItem="ey1-3N-jDi" secondAttribute="top" id="ebv-dV-VGS"/>
+                                        <constraint firstItem="Io7-MO-fEq" firstAttribute="centerY" secondItem="BwP-Jq-AEK" secondAttribute="centerY" id="fW5-2o-obs"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="JTO-JE-Vmm" secondAttribute="bottom" constant="30" id="gNl-Fx-gjO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageFriend" destination="1CH-eO-csF" id="sza-BO-xAw"/>
+                                    <outlet property="imageFriend" destination="EfV-75-lG4" id="rBa-Kd-84E"/>
                                     <outlet property="labelFriend" destination="Io7-MO-fEq" id="ty9-Mf-YPE"/>
                                     <segue destination="NNc-kz-h2G" kind="show" id="1hi-pf-GA9"/>
                                 </connections>
@@ -305,6 +337,7 @@
                     <navigationItem key="navigationItem" id="Fzp-28-q3W"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FL-yn-AbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7js-ah-skr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4810.7692307692305" y="-789.09952606635068"/>
         </scene>
@@ -431,13 +464,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="folder.fill.badge.minus" catalog="system" width="128" height="92"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="logo.png" width="100" height="100"/>
         <image name="person.2.fill" catalog="system" width="128" height="81"/>
         <image name="person.3.sequence.fill" catalog="system" width="128" height="59"/>
+        <image name="trash.slash.fill" catalog="system" width="119" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
