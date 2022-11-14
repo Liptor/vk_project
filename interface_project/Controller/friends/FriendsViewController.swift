@@ -19,13 +19,8 @@ class FriendsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tableView.register(UINib(nibName: "FriendTableViewCell", bundle: nil), forCellReuseIdentifier: "FriendXibTableCell")
     }
 
     // MARK: - Table view data source
@@ -43,13 +38,13 @@ class FriendsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendXibTableCell", for: indexPath) as? FriendTableViewCell else {
             preconditionFailure("Friendcell cannot")
         }
         
-        cell.labelFriend.text = friends[indexPath.row].name
-        cell.imageFriend.image = friends[indexPath.row].image
-        cell.imageFriend.setRounded()
+        cell.friendLabel.text = friends[indexPath.row].name
+        cell.fiendImage.image = friends[indexPath.row].image
+        cell.fiendImage.setRounded()
         
         return cell
     }
