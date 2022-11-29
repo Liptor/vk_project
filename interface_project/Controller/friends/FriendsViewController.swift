@@ -8,7 +8,7 @@
 import UIKit
 
 class FriendsViewController: UITableViewController {
-
+    
     let friends = [
         Friend(image: UIImage(named: "avatar.jpg"), name: "Andrew"),
         Friend(image: UIImage(named: "avatar.jpg"), name: "Petr"),
@@ -16,26 +16,49 @@ class FriendsViewController: UITableViewController {
         Friend(image: UIImage(named: "avatar.jpg"), name: "Semen"),
         Friend(image: UIImage(named: "avatar.jpg"), name: "Alexey")
     ]
-
+    
+    var sortedFriend = [Character: [Friend]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "FriendTableViewCell", bundle: nil), forCellReuseIdentifier: "FriendXibTableCell")
+        
+        self.sortedFriend = sort(friends: friends)
     }
-
+    
     // MARK: - Table view data source
-
+    
+    private func sort(friends: [Friend]) -> [Character: [Friend]] {
+        var friendsDict = [Character: [Friend]]()
+        
+        friends.forEach() { friend in
+            
+            guard let firstChar = friend.name.first else {return}
+            
+            if var thisCharFriends = friendsDict[firstChar] {
+                thisCharFriends.append(friend)
+                friendsDict[firstChar] = thisCharFriends
+            } else {
+                friendsDict[firstChar] = [friend]
+            }
+        }
+        
+        
+        return friendsDict
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      
+
         return friends.count
     }
-
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendXibTableCell", for: indexPath) as? FriendTableViewCell else {
