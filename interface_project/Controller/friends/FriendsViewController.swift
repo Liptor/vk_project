@@ -50,12 +50,15 @@ class FriendsViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return sortedFriend.keys.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return friends.count
+        let keySorted = sortedFriend.keys.sorted()
+        
+        let friends = sortedFriend[keySorted[section]]?.count ?? 0
+        
+        return friends
     }
     
     
@@ -65,11 +68,20 @@ class FriendsViewController: UITableViewController {
             preconditionFailure("Friendcell cannot")
         }
         
-        cell.friendLabel.text = friends[indexPath.row].name
-        cell.fiendImage.image = friends[indexPath.row].image
+        let firstChar = sortedFriend.keys.sorted()[indexPath.section]
+        let friends = sortedFriend[firstChar]!
+        
+        let friend: Friend = friends[indexPath.row]
+        
+        cell.friendLabel.text = friend.name
+        cell.fiendImage.image = friend.image
         cell.fiendImage.setRounded()
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        String(sortedFriend.keys.sorted()[section])
     }
 
 
