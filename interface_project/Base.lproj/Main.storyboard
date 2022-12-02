@@ -232,7 +232,7 @@
                             <outlet property="delegate" destination="cnE-IJ-Y2A" id="uZI-Ul-24N"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Groups" selectedImage="person.3.sequence.fill" catalog="system" id="zkP-ar-xG2"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="person.3.fill" catalog="system" selectedImage="person.3.sequence.fill" id="zkP-ar-xG2"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="u9z-0P-cMz">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="s2l-2V-xMT">
@@ -246,6 +246,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhm-uy-Nu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4810.7692307692305" y="742.89099526066343"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="zB3-WD-hiq">
+            <objects>
+                <tableViewController id="fV5-jk-jdp" customClass="NewsViewController" customModule="interface_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Dne-FL-H3B">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="fV5-jk-jdp" id="yWo-q7-7Lu"/>
+                            <outlet property="delegate" destination="fV5-jk-jdp" id="xO1-RY-diJ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper.fill" catalog="system" selectedImage="newspaper.fill" id="F8U-I1-xCK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JvK-Mz-mhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4842" y="4"/>
         </scene>
         <!--Friends-->
         <scene sceneID="qzm-3B-5NQ">
@@ -338,6 +357,7 @@
                     <connections>
                         <segue destination="st4-PV-cBI" kind="relationship" relationship="viewControllers" id="FAE-ww-jJK"/>
                         <segue destination="cnE-IJ-Y2A" kind="relationship" relationship="viewControllers" id="Qmt-RU-DKh"/>
+                        <segue destination="fV5-jk-jdp" kind="relationship" relationship="viewControllers" id="rOx-eP-bsF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1x-MB-gBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -394,7 +414,9 @@
     </scenes>
     <resources>
         <image name="logo.png" width="100" height="100"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="person.2.fill" catalog="system" width="128" height="81"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.3.sequence.fill" catalog="system" width="128" height="59"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
