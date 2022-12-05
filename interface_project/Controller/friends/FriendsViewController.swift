@@ -111,5 +111,4 @@ class FriendsViewController: UITableViewController {
             destinationVC.oneFriendImage = friends
         }
     }
-
 }

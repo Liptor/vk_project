@@ -16,15 +16,19 @@ class GroupsViewController: UITableViewController {
         Group(image: UIImage(systemName: "calendar"), name: "Basketball" ),
         Group(image: UIImage(systemName: "archivebox"), name: "Rock" ),
     ]
-
+    
+    @IBOutlet weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+        }
+    }
+    
+    var filteredGroup = [Group]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        filteredGroup = groups
     }
 
     // MARK: - Table view data source
@@ -36,7 +40,7 @@ class GroupsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return filteredGroup.count
     }
 
     
@@ -46,8 +50,8 @@ class GroupsViewController: UITableViewController {
             preconditionFailure("GroupCell cannot")
         }
         
-        cell.labelGroup.text = groups[indexPath.row].name
-        cell.imageGroup.image = groups[indexPath.row].image
+        cell.labelGroup.text = filteredGroup[indexPath.row].name
+        cell.imageGroup.image = filteredGroup[indexPath.row].image
 
         return cell
     }
@@ -97,5 +101,17 @@ class GroupsViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension GroupsViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredGroup = groups
+        } else {
+            filteredGroup = groups.filter {$0.name.contains(searchText) }
+        }
+        tableView.reloadData()
+    }
 
 }
