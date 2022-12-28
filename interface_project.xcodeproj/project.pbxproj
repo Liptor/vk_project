@@ -11,6 +11,7 @@
 		D81696972919488300641297 /* AvatarControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81696962919488300641297 /* AvatarControl.swift */; };
 		D81E6D6B291057C2004FA0C0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D81E6D6A291057C2004FA0C0 /* logo.png */; };
 		D82B426F291F9AFF007F99D3 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B426E291F9AFF007F99D3 /* LikeControl.swift */; };
+		D844DEE2295B85E100A5A50F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844DEE1295B85E100A5A50F /* LoginController.swift */; };
 		D846268A2936B1260060AAA2 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84626882936B1260060AAA2 /* NewsTableViewCell.swift */; };
 		D846268B2936B1260060AAA2 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84626892936B1260060AAA2 /* NewsTableViewCell.xib */; };
 		D84626932936B8E50060AAA2 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84626922936B8E50060AAA2 /* News.swift */; };
@@ -23,7 +24,6 @@
 		D86EF68629140C7F004BA181 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EF68529140C7F004BA181 /* Group.swift */; };
 		D86EF689291413C5004BA181 /* OneFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EF688291413C5004BA181 /* OneFriendViewController.swift */; };
 		D86EF68B291413F9004BA181 /* OneFriendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EF68A291413F9004BA181 /* OneFriendViewCell.swift */; };
-		D88E2FFD293A252700D45D07 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88E2FFC293A252700D45D07 /* AnimationViewController.swift */; };
 		D8A22A262922724F0028B8F5 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A22A242922724F0028B8F5 /* FriendTableViewCell.swift */; };
 		D8A22A272922724F0028B8F5 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A22A252922724F0028B8F5 /* FriendTableViewCell.xib */; };
 		D8BF9CD528F7586600C3A333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BF9CD428F7586600C3A333 /* AppDelegate.swift */; };
@@ -39,6 +39,7 @@
 		D81696962919488300641297 /* AvatarControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarControl.swift; sourceTree = "<group>"; };
 		D81E6D6A291057C2004FA0C0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../../icons8-vk-com-color/logo.png"; sourceTree = "<group>"; };
 		D82B426E291F9AFF007F99D3 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		D844DEE1295B85E100A5A50F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D84626882936B1260060AAA2 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		D84626892936B1260060AAA2 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		D84626922936B8E50060AAA2 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		D86EF68529140C7F004BA181 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		D86EF688291413C5004BA181 /* OneFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFriendViewController.swift; sourceTree = "<group>"; };
 		D86EF68A291413F9004BA181 /* OneFriendViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFriendViewCell.swift; sourceTree = "<group>"; };
-		D88E2FFC293A252700D45D07 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		D8A22A242922724F0028B8F5 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		D8A22A252922724F0028B8F5 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
 		D8BF9CD128F7586600C3A333 /* interface_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interface_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +94,7 @@
 				D86EF67F29140AFC004BA181 /* friends */,
 				D86EF688291413C5004BA181 /* OneFriendViewController.swift */,
 				D86EF68A291413F9004BA181 /* OneFriendViewCell.swift */,
+				D844DEE1295B85E100A5A50F /* LoginController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,7 +172,6 @@
 		D8BF9CC828F7586600C3A333 = {
 			isa = PBXGroup;
 			children = (
-				D88E2FFC293A252700D45D07 /* AnimationViewController.swift */,
 				D82B426E291F9AFF007F99D3 /* LikeControl.swift */,
 				D8BF9CD328F7586600C3A333 /* interface_project */,
 				D8BF9CD228F7586600C3A333 /* Products */,
@@ -282,7 +282,6 @@
 				D86EF68629140C7F004BA181 /* Group.swift in Sources */,
 				D86EF68229140BB1004BA181 /* GroupsViewController.swift in Sources */,
 				D86EF67A2913EFA8004BA181 /* FriendsViewController.swift in Sources */,
-				D88E2FFD293A252700D45D07 /* AnimationViewController.swift in Sources */,
 				D84626932936B8E50060AAA2 /* News.swift in Sources */,
 				D86EF67E2913F654004BA181 /* Friend.swift in Sources */,
 				D801704528F7663B0086E56A /* LoginViewController.swift in Sources */,
@@ -293,6 +292,7 @@
 				D846268A2936B1260060AAA2 /* NewsTableViewCell.swift in Sources */,
 				D86EF68B291413F9004BA181 /* OneFriendViewCell.swift in Sources */,
 				D82B426F291F9AFF007F99D3 /* LikeControl.swift in Sources */,
+				D844DEE2295B85E100A5A50F /* LoginController.swift in Sources */,
 				D81696972919488300641297 /* AvatarControl.swift in Sources */,
 				D86EF689291413C5004BA181 /* OneFriendViewController.swift in Sources */,
 				D8A22A262922724F0028B8F5 /* FriendTableViewCell.swift in Sources */,

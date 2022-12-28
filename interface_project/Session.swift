@@ -11,10 +11,10 @@ import Foundation
 
 class Session {
     
-    static let session = Session()
+    static let instance = Session()
     private init() {}
     
-    let token = ""
-    let userId = 0
+    var token = ""
+    var userId = 0
     
 }
